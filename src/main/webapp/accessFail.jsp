@@ -16,7 +16,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>일시적인 서비스 장애 안내.</title>
+	<title>일시적인 서비스 장애 안내</title>
 	<link href="<c:url value='/css/egovframework/story/base.css' />" rel="stylesheet" type="text/css" />
 	<style>
 	#error {padding-top:260px; text-align:center; background:url(/images/error_img.gif) 50% 30% no-repeat;}
