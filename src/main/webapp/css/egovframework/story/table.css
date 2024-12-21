@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+/* 
+    Document   : table
+    Author     : hyunho
+    Description: 관리자 css import 기본 
+*/
+
+table {border-collapse:collapse;}
+
+
+/*x테이블 정렬*/
+.tbl-l {text-align:left !important;}
+.tbl-r {text-align:right !important;}
+.tbl-m {vertical-align:middle !important;}
+
+/*테이블-기본*/
+.tbl-static {
+	border-collapse:collapse !important;
+	border-top:1px solid #acacac !important;
+	border-right:none !important;
+	border-bottom:none !important;
+	border-left:1px solid #acacac !important;
+}
+.tbl-static thead th {
+	padding:10px 8px !important;
+	text-align:center !important;
+	vertical-align:middle !important;
+	border-top:none !important;
+	border-right:1px solid #acacac !important;
+	border-bottom:1px solid #acacac !important;
+	border-left:none !important;
+	background-color:#d8f1ff !important;
+}
+.tbl-static tbody th,
+.tbl-static tbody td {
+	padding:9px 8px !important;
+	text-align:center !important;
+	border-top:none!important;
+	border-left:none!important;
+	border-right:1px solid #acacac !important;
+	border-bottom:1px solid #acacac !important;
+	background-color:#fff !important;
+}
+.tbl-static tbody th.twoline,
+.tbl-static tbody td.twoline {
+	border-bottom:2px solid #a8a8a8 !important;
+}
+.tbl-static tfoot th {
+	padding:11px 8px !important;
+	text-align:center !important;
+	border-top:none!important;
+	border-left:none!important;
+	border-right:1px solid #acacac !important;
+	border-bottom:1px solid #acacac !important;
+	background-color:#fff !important;
+}
+
+.tbl-static thead tr.secline th {background-color:#f0f9ff !important;}/* thead 2번째줄 부터 */
+.tbl-static thead th.all_bg {color:#fff !important; background-color:#367dcc !important;}/* thead 합계 */
+.tbl-static thead tr.secline th.total_bg {background-color:#deeaf5 !important;}/* thead 소계 */
+.tbl-static tbody th.pin_bg, .tbl-static tbody td.pin_bg {background-color:#f8f8f8 !important;}/* tbody 포인트 */
+
+/*테이블-스크롤*/
+.tbl-scroll tbody th,
+.tbl-scroll tbody td {
+	border-right:none !important;
+}

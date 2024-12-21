@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:task="http://www.springframework.org/schema/task" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.0.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+<!--
+    수정일          수성자                          수정내용
+   ==========      ========      =================================================
+   2018.01.11       신현호         최초 설정
+
+  ************************************************************************************************
+    - 스케줄러 설정
+    1. 스케줄러 관련 클래스가 존재하는 패키지를 스캔
+    2. 스케줄러 클래스 BEAN 설정
+    3. 스케줄러 실행 설정
+       ref -> bean 설정 네이밍, method -> 실행메소드, cron -> 스케줄러 실행주기
+
+       cron 표현식 (초/분/시/날/달/요일/년도)
+       ==========================================================================
+       필드이름			허용값
+       =========        =========================================================
+         초  			0 ~ 59
+         분 			0 ~ 59
+         시 			0 ~ 23
+         날 			1 ~ 31
+         달 			1 ~ 12 OR JAN ~ DEC
+         요일 			1 ~ 7 OR SUN ~ SAT
+         년도 			빈값 OR 1970 ~ 2099
+
+       cron 표현식의 특수문자
+       =============================================================================================
+       표현식			설명							예시
+       =========        ==========================  	============================================
+       	 * 				모든 수를 나타냄
+       	 - 				값의 사이를 의미 				* 10-13 * * * * 10,11,12,13분에 동작함
+       	 , 				특정값 지칭 					* 10,11,13 * * * * 10,11,13분에 동작함
+       	 / 				값의 증가를 표현 				* 0/5 * * * * 0분부터 시작해서 5분마다 동작
+       	 ? 				특별한 값이 없음을 나타냄
+       	 L 				마지막 날을 나타냄 				* * * * * 7L 해당월의 마지막 토요일을 의미
+  ************************************************************************************************
+-->
+
+	<!-- 1. 스케줄러 패키지 -->
+    <context:component-scan base-package="egovframework.storyCms.tasks.scheduler" />
+
+ 	<!-- 2. 스케줄러 클래스 BEAN 설정 -->
+    <bean id="autoCampResvScheduler" class="egovframework.crawling.tasks.scheduler.AutoCampResvScheduler" />
+
+    <!-- 3. 스케줄러 실행 설정 -->
+    <task:scheduled-tasks>
+    	<!-- 매월 2일 오전 12시에 실행 -->
+        <task:scheduled ref="autoCampResvScheduler" method="execute" cron="0 0 12 2 * *"/>
+    </task:scheduled-tasks>
+
+</beans>

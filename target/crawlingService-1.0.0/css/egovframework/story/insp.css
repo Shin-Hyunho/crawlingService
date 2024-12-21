@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/* 
+    Document   : insp
+    Created on : 2015. 7. 14, 오전 9:40:43
+    Author     : hyunho
+    Description: 관리자 css import 기본  
+*/
+
+/*body {min-width:1200px;}*/
+.panel.no-sdw {box-shadow:none !important;}
+.panel.panel-back {padding:10px; background-color:#f9f9f9;}
+
+
+.form-linebox {padding:20px; border-radius:4px; border:1px solid #ddd; background-color:#f9f9f9;}
+.form-linebox.noback {background:#fff;}
+.form-group .cellbox {display:inline-block; margin:3px 5px;}
+.form-group .cellbox input,
+.form-group .cellbox seclect {min-width:180px;}
+.form-group .cellbtn-box {display:inline-block;}
+.form-group .date-box {}
+.form-group .date-box .tit {display:inline-block;}
+
+ /* 도움말 추가 */
+.txtadd-box {position:relative; padding-right:56px;}
+.txtadd-box-inner {}
+.txtadd-link {display:inline-block; position:absolute; right:0; top:5px; width:48px; height:24px; background:url(/images/egovframework/story/img_txtadd_info.png) 0 0 no-repeat;}
+.txtadd-link.on {background-position:0 -34px;}
+
+.txtadd-bubble {display:none; position:absolute; right:-415px; top:-20px; width:410px; min-height:130px; border:2px solid #337ab7; border-radius:15px; background-color:#f2f8fc; z-index:800;}
+.txtadd-bubble.onck {display:block;}
+.txtadd-bubble-inner {padding:15px 12px; font-size:12px;}
+.txtadd-bubble-inner h3 {margin:0 0 10px; font-size:15px !important; font-weight:bold; color:#212121;}
+.txtadd-bubble-inner ul {list-style:none;}
+.txtadd-bubble-inner ul li {position:relative; margin:1px 0 2px; padding-left:7px; }
+/* .txtadd-bubble-inner ul li:before {content:''; position:absolute; left:0; top:5px; width:4px; height:2px; background-color:#444;}  */
+.txtadd-bubble1 {display:none; position:absolute; right:-270px; top:40px; width:540px; min-height:130px; border:2px solid #337ab7; border-radius:15px; background-color:#f2f8fc; z-index:800;}
+.txtadd-bubble1.onck {display:block;}
+
+.tbl-bubble {margin:0; border-top:1px solid #ddd; border-right:1px solid #ddd; background-color:#fff;}
+.tbl-bubble.btm10 {margin-bottom:10px;}
+.tbl-bubble th, .tbl-bubble td {border-left:1px solid #ddd; border-bottom:1px solid #ddd; text-align:center;}
+
+@media (max-width: 768px){
+	.form-group .cellbox {display:block; margin-top:10px}
+	.form-group .cellbtn-box {display:block; margin-top:20px; text-align:center;}
+	.form-group .btn-all button {width:100%;}
+	.form-group .date-box .tit {display:block; max-width:100%; margin-bottom: 5px;}
+	.form-group .date-box label {position:relative; width:47%; padding-right:28px;}
+	.form-group .date-box label input{min-width:auto;}
+	.form-group .date-box label i {position:absolute; right:2px; top:9px;}
+}

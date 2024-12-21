@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/* 
+    Document   : base
+    Created on : 2015. 7. 14, 오전 9:40:43
+    Author     : hyunho
+    Description: 관리자 css import 기본  
+*/
+
+@import url("font.css");
+@import url("layout.css");
+@import url("insp.css");
+@import url("size.css");
+@import url("table.css");

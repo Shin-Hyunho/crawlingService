@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<!--
+    수정일          수성자                          수정내용
+   ==========      ========      =================================================
+   2022.03.10       신현호         최초 설정 
+-->       
+<tiles-definitions>
+
+	<!-- 크롤링 레이아웃 공통 -->
+	<definition name="common" template="/WEB-INF/jsp/egovframework/story/layouts/layouts-common.jsp">
+		<put-attribute name="content"   value="" />
+	</definition>
+
+	<!-- 크롤링 레이아웃 공통 -->
+	<definition name="autoCamp" template="/WEB-INF/jsp/egovframework/story/layouts/layouts-autoCamp.jsp">
+		<put-attribute name="content"   value="" />
+	</definition>
+
+	<!-- 로그인 레이아웃 -->
+	<definition name="login" template="/WEB-INF/jsp/egovframework/story/layouts/layouts-login.jsp">
+		<put-attribute name="content"   value="" />
+	</definition>
+	
+	<!-- 로그인 레이아웃 -->
+	<definition name="egovframework/story/login" extends="login">
+		<put-attribute name="content"   value="/WEB-INF/jsp/egovframework/story/login.jsp" />
+	</definition>
+	
+	<!-- 크롤링 레이아웃1 include path -->
+	<definition name="egovframework/story/crawling/*/*/*/*" extends="common">
+		<put-attribute name="content"   value="/WEB-INF/jsp/egovframework/story/crawling/{1}/{2}/{3}/{4}.jsp" />
+	</definition>
+	
+	<!-- 크롤링 레이아웃2 include path -->
+	<definition name="egovframework/story/crawling/*/*/*" extends="autoCamp">
+		<put-attribute name="content"   value="/WEB-INF/jsp/egovframework/story/crawling/{1}/{2}/{3}.jsp" />
+	</definition>
+	
+</tiles-definitions>
