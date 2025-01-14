@@ -30,7 +30,7 @@
 </head>
 <body>
 <%
-if (request.getSession().getAttribute("IS_LOGIN") != null) {
+if (request.getSession().getAttribute("IS_LOGIN") != null) { 
 %>
 <div id="container">
 	<div id="contentarea">
