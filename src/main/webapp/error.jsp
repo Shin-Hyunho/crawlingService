@@ -34,7 +34,7 @@
 <div id="error">
 	<p class="title">이용에 불편을 드려 죄송합니다.</p>
 	<p class="message">
-		페이지의 주소가 올바른지 다시 한번 확인해 주시길 부탁드립니다.<br />
+		페이지의 주소가 올바른지 다시 한번 확인해 주시길 부탁드립니다. <br />
 		계속된 오류시에 관리자에게 문의바랍니다.
 	</p>
 	<a href="javascript:fncGoAfterErrorPage();" class="btn">이전 페이지로</a>
